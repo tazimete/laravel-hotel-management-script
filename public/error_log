@@ -1,0 +1,2 @@
+[12-Apr-2016 09:33:25 UTC] PHP Fatal error:  Class 'App\Http\Controllers\HalalRestaurantModel' not found in /home/sonnenbaum/public_html/tripfez/app/Http/Controllers/HalalRestaurantController.php on line 90
+[13-Apr-2016 05:51:18 UTC] PHP Fatal error:  Cannot use App\HalalRestaurantModel as HalalRestaurantModel because the name is already in use in /home/sonnenbaum/public_html/tripfez/app/Http/Controllers/HalalRestaurantController.php on line 10

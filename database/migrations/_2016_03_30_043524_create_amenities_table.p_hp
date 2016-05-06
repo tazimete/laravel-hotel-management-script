@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateAmenitiesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up() 
+    {  
+        Schema::table('amenities_review', function (Blueprint $table) {
+            $table->bigIncrements('id');
+			$table->bigInteger('user_id')->unsigned(); 
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+			$table->bigInteger('property_id');
+            $table->string('muslim_prayer_mat');  
+            $table->string('qibla_direction');  
+            $table->string('quran_in_room');  
+            $table->string('praying_direction_from_hotel_staff');  
+            $table->string('local_prayer_time_table');  
+            $table->string('halal_restaurant_list');  
+            $table->string('mosque_or_suraus_list');  
+            $table->string('alcoholic_beverages');  
+            $table->string('halal_food');  
+            $table->integer('status');  
+            $table->timestamps(); 
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('amenities_review', function (Blueprint $table) {
+            //
+        });
+    }
+}
